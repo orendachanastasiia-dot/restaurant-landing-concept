@@ -16,8 +16,8 @@
 <meta property="og:title" content="Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1">
 <meta property="og:description" content="Shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1. Dine-in, takeaway or Deliveroo.">
 <meta property="og:url" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/">
-<!-- og:image must be an absolute https URL once deployed; file: assets/og-image.jpg (1200×630) -->
-<meta property="og:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/assets/og-image.jpg">
+<!-- og:image must be an absolute https URL once deployed; file: og-image.jpg (1200×630) -->
+<meta property="og:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Yak Doma logo over a photo of a guest biting into a shawarma">
@@ -25,11 +25,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1">
 <meta name="twitter:description" content="Shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1.">
-<meta name="twitter:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/assets/og-image.jpg">
+<meta name="twitter:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/og-image.jpg">
 <!-- Icons (generated from the Yak Doma emblem) -->
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- GA4: вставити тег тут -->
 <!-- Meta Pixel: вставити тут -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -381,7 +381,7 @@ function heroPhotoError(img){
   <div class="wrap header__inner">
     <!-- Logo traced from Yak Doma's own signage (Instagram profile photo). Swap for the original vector file when available. -->
     <a class="logo" href="#top">
-      <img src="assets/logo-sign-white.png" alt="Yak Doma — back to top" width="1192" height="268">
+      <img src="logo-sign-white.png" alt="Yak Doma — back to top" width="1192" height="268">
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul>
@@ -401,8 +401,8 @@ function heroPhotoError(img){
 
 <!-- ======= 02 HERO ======= -->
 <section class="hero" id="top" aria-labelledby="hero-title">
-  <img class="hero__bg" src="assets/hero-2400.jpg" srcset="assets/hero-1200.jpg 1200w, assets/hero-2400.jpg 2400w" sizes="100vw" alt="" width="2400" height="1354" fetchpriority="high" decoding="async">
-  <img class="hero__cut" srcset="assets/hero-cut-1200.webp 1200w, assets/hero-cut-2400.webp 2400w" sizes="100vw" src="assets/hero-cut-1200.webp" alt="" width="2400" height="1354" decoding="async">
+  <img class="hero__bg" src="hero-2400.jpg" srcset="hero-1200.jpg 1200w, hero-2400.jpg 2400w" sizes="100vw" alt="" width="2400" height="1354" fetchpriority="high" decoding="async">
+  <img class="hero__cut" srcset="hero-cut-1200.webp 1200w, hero-cut-2400.webp 2400w" sizes="100vw" src="hero-cut-1200.webp" alt="" width="2400" height="1354" decoding="async">
   <div class="hero__inner">
     <p class="hero__kicker eyebrow"><span>Dublin 1</span><span class="dot" aria-hidden="true">●</span><span>Dine-in &amp; takeaway</span></p>
     <div class="hero__titlewrap">
@@ -553,7 +553,7 @@ function heroPhotoError(img){
       </div>
       <div class="map">
         <iframe src="https://www.google.com/maps?q=Yak+Doma,+D01+XP94,+Dublin&amp;output=embed" title="Map: Yak Doma, Dublin D01 XP94" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <span class="map__badge" aria-hidden="true"><img loading="lazy" src="assets/logo-emblem-white.png" alt="" width="160" height="164"></span>
+        <span class="map__badge" aria-hidden="true"><img loading="lazy" src="logo-emblem-white.png" alt="" width="160" height="164"></span>
         <div class="map__fallback"><svg class="map__pin" aria-hidden="true"><use href="#i-pin"/></svg><p>Yak Doma · Dublin 1, D01 XP94</p></div>
       </div>
     </div>
@@ -565,7 +565,7 @@ function heroPhotoError(img){
 <!-- ======= 09 FOOTER ======= -->
 <footer class="site-footer">
   <div class="wrap">
-    <img class="footer__logo" src="assets/logo-sign-white.png" alt="Yak Doma" width="1192" height="268" loading="lazy">
+    <img class="footer__logo" src="logo-sign-white.png" alt="Yak Doma" width="1192" height="268" loading="lazy">
     <div class="footer__grid">
       <div>
         <h2>Explore</h2>
@@ -612,26 +612,26 @@ const ORDER_URL = "https://deliveroo.ie/menu/dublin/dublin-1/yak-doma/";
 const CONTENT = {
   // Source: Deliveroo listing, 16 Oct 2026
   shawarma: [
-    { name:"Kyiv",    img:"assets/shawarma-kyiv.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, tomatoes, pickles, Korean-style carrots", price:"€11.00", tone:"green", note:"Same fillings as Lviv — difference TBC" },
-    { name:"Odesa",   img:"assets/shawarma-odesa.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, fries, cabbage, tomatoes, pickles, Korean-style carrots", price:"€13.50", tone:"red", badge:"Best seller", tagline:"Black Sea classic — juicy, fresh, packed with veggies & protein." },
-    { name:"Lviv",    img:"assets/shawarma-lviv.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, tomatoes, pickles, Korean-style carrots", price:"€8.50", tone:"cream", note:"Same fillings as Kyiv — difference TBC" },
-    { name:"Donbass", img:"assets/shawarma-donbass.jpg", w:800, h:1200, desc:"Chicken, cheese, garlic sauce, American light sauce", price:"€15.00", tone:"corn" },
-    { name:"Hawaii",  img:"assets/shawarma-hawaii.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, sweet corn, mozzarella, cheese sauce, pineapple", price:"€13.50", tone:"pink" }
+    { name:"Kyiv",    img:"shawarma-kyiv.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, tomatoes, pickles, Korean-style carrots", price:"€11.00", tone:"green", note:"Same fillings as Lviv — difference TBC" },
+    { name:"Odesa",   img:"shawarma-odesa.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, fries, cabbage, tomatoes, pickles, Korean-style carrots", price:"€13.50", tone:"red", badge:"Best seller", tagline:"Black Sea classic — juicy, fresh, packed with veggies & protein." },
+    { name:"Lviv",    img:"shawarma-lviv.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, tomatoes, pickles, Korean-style carrots", price:"€8.50", tone:"cream", note:"Same fillings as Kyiv — difference TBC" },
+    { name:"Donbass", img:"shawarma-donbass.jpg", w:800, h:1200, desc:"Chicken, cheese, garlic sauce, American light sauce", price:"€15.00", tone:"corn" },
+    { name:"Hawaii",  img:"shawarma-hawaii.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, sweet corn, mozzarella, cheese sauce, pineapple", price:"€13.50", tone:"pink" }
   ],
   // Names from menu materials; prices not verified
   ukraine: [
-    { label:"Borscht", w:762, h:522, img:"assets/dish-borscht.jpg",   name:"Borscht", art:"bowl", tone:"beet" },
-    { label:"Dumplings", w:762, h:522, img:"assets/dish-dumplings.jpg", name:"Dumplings with potatoes", art:"dumplings", tone:"cream" },
-    { label:"Banosh", w:762, h:490, img:"assets/dish-banosh.jpg",    name:"Banosh with cracklings & feta", art:"plate", tone:"corn" },
-    { label:"Goulash", w:1200, h:772, img:"assets/dish-goulash.jpg",   name:"Mashed potatoes with goulash", art:"plate", tone:"green" }
+    { label:"Borscht", w:762, h:522, img:"dish-borscht.jpg",   name:"Borscht", art:"bowl", tone:"beet" },
+    { label:"Dumplings", w:762, h:522, img:"dish-dumplings.jpg", name:"Dumplings with potatoes", art:"dumplings", tone:"cream" },
+    { label:"Banosh", w:762, h:490, img:"dish-banosh.jpg",    name:"Banosh with cracklings & feta", art:"plate", tone:"corn" },
+    { label:"Goulash", w:1200, h:772, img:"dish-goulash.jpg",   name:"Mashed potatoes with goulash", art:"plate", tone:"green" }
   ],
   // Unconfirmed — replace with real products from menu photos
-  // Dessert photos (assets/sweet-1..4.jpg). Titles describe the photo — official names & prices TBC
+  // Dessert photos (sweet-1..4.jpg). Titles describe the photo — official names & prices TBC
   sweets: [
-    { name:"Blueberry dessert", img:"assets/sweet-1.jpg", alt:"Round purple blueberry-shaped mousse desserts on gold bases", tone:"cream" },
-    { name:"Chocolate & passion fruit", img:"assets/sweet-2.jpg", alt:"Chocolate cups filled with cream and topped with passion fruit", tone:"cream" },
-    { name:"Mango dessert", img:"assets/sweet-3.jpg", alt:"Yellow and pink mango-shaped mousse desserts on gold bases", tone:"cream" },
-    { name:"Raspberry dessert", img:"assets/sweet-4.jpg", alt:"Bright red raspberry-shaped mousse desserts on gold bases", tone:"cream" }
+    { name:"Blueberry dessert", img:"sweet-1.jpg", alt:"Round purple blueberry-shaped mousse desserts on gold bases", tone:"cream" },
+    { name:"Chocolate & passion fruit", img:"sweet-2.jpg", alt:"Chocolate cups filled with cream and topped with passion fruit", tone:"cream" },
+    { name:"Mango dessert", img:"sweet-3.jpg", alt:"Yellow and pink mango-shaped mousse desserts on gold bases", tone:"cream" },
+    { name:"Raspberry dessert", img:"sweet-4.jpg", alt:"Bright red raspberry-shaped mousse desserts on gold bases", tone:"cream" }
   ],
   // Source: Yak Doma in-store menu (Instagram post) + Deliveroo listing, Oct 2026
   extras: [
@@ -675,9 +675,9 @@ const CONTENT = {
   // Customer reactions: video – photo – video – photo (usernames cropped/blurred from the story screenshots)
   reels: [
     { vimeo:"1236592186", title:"Customer reaction video" },
-    { photo:"assets/review-1.jpg", alt:"Customer story: two shawarma wraps with garlic sauce, captioned 'Thank you! So tasty! Delicious!'" },
+    { photo:"review-1.jpg", alt:"Customer story: two shawarma wraps with garlic sauce, captioned 'Thank you! So tasty! Delicious!'" },
     { vimeo:"1236597205", title:"Customer reaction video", maskTop:25 }, // maskTop: % of the top hidden (covers the reposted account name baked into the video)
-    { photo:"assets/review-2.jpg", alt:"Customer story: borscht with rye bread and Olivier salad, captioned 'Bon appetite, provided by @yakdomadublin1'" }
+    { photo:"review-2.jpg", alt:"Customer story: borscht with rye bread and Olivier salad, captioned 'Bon appetite, provided by @yakdomadublin1'" }
   ]
 };
 

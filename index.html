@@ -8,16 +8,16 @@
 <!-- Concept site: keep pages out of search results until the restaurant approves it and it lives on their own domain. Remove this line then. -->
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#111111">
-<!-- Site URL (GitHub Pages). Update these if the site moves to its own domain. -->
-<link rel="canonical" href="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/">
+<!-- Site URL (Vercel). Update these if the site moves to its own domain. -->
+<link rel="canonical" href="https://restaurant-landing-concept.vercel.app/">
 <!-- Open Graph / link previews -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yak Doma">
 <meta property="og:title" content="Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1">
 <meta property="og:description" content="Shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1. Dine-in, takeaway or Deliveroo.">
-<meta property="og:url" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/">
+<meta property="og:url" content="https://restaurant-landing-concept.vercel.app/">
 <!-- og:image must be an absolute https URL once deployed; file: og-image.jpg (1200×630) -->
-<meta property="og:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/og-image.jpg">
+<meta property="og:image" content="https://restaurant-landing-concept.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Yak Doma logo over a photo of a guest biting into a shawarma">
@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1">
 <meta name="twitter:description" content="Shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1.">
-<meta name="twitter:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/og-image.jpg">
+<meta name="twitter:image" content="https://restaurant-landing-concept.vercel.app/og-image.jpg">
 <!-- Icons (generated from the Yak Doma emblem) -->
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -678,7 +678,7 @@ const CONTENT = {
   ],
   // Customer reactions: video – photo – video – photo (usernames cropped/blurred from the story screenshots)
   reels: [
-    { vimeo:"1236592186", title:"Customer reaction video" },
+    { vimeo:"1236592186", h:"845b256bf7", title:"Customer reaction video" },
     { photo:"review-1.jpg", alt:"Customer story: two shawarma wraps with garlic sauce, captioned 'Thank you! So tasty! Delicious!'" },
     { vimeo:"1236597205", title:"Customer reaction video", maskTop:25 }, // maskTop: % of the top hidden (covers the reposted account name baked into the video)
     { photo:"review-2.jpg", alt:"Customer story: borscht with rye bread and Olivier salad, captioned 'Bon appetite, provided by @yakdomadublin1'" }
@@ -742,7 +742,7 @@ const Reel = r => r.photo ? `
     <span class="reel__bg" aria-hidden="true"></span><span class="reel__fg" aria-hidden="true"></span>
   </div>` : r.vimeo ? `
   <div class="reel reel--video">
-    <iframe src="https://player.vimeo.com/video/${esc(r.vimeo)}?badge=0&autopause=0&title=0&byline=0&portrait=0&loop=1&dnt=1" title="${esc(r.title || "Customer video")}" loading="lazy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>${r.maskTop ? `<span class="reel__mask" style="height:${+r.maskTop}%" aria-hidden="true"></span>` : ""}
+    <iframe src="https://player.vimeo.com/video/${esc(r.vimeo)}?${r.h ? `h=${esc(r.h)}&` : ""}badge=0&autopause=0&title=0&byline=0&portrait=0&loop=1&dnt=1" title="${esc(r.title || "Customer video")}" loading="lazy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>${r.maskTop ? `<span class="reel__mask" style="height:${+r.maskTop}%" aria-hidden="true"></span>` : ""}
   </div>` : `
   <div class="reel">${tbc("Placeholder")}
     <div><span class="reel__icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span><p>${esc(r.text)}</p></div>

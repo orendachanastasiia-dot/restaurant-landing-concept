@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1</title>
+<meta name="description" content="Ukrainian shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1 (D01 XP94). Open 11:00–21:00. Order on Deliveroo.">
+<!-- Concept site: keep pages out of search results until the restaurant approves it and it lives on their own domain. Remove this line then. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#111111">
+<!-- Site URL (GitHub Pages). Update these if the site moves to its own domain. -->
+<link rel="canonical" href="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/">
+<!-- Open Graph / link previews -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yak Doma">
+<meta property="og:title" content="Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1">
+<meta property="og:description" content="Shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1. Dine-in, takeaway or Deliveroo.">
+<meta property="og:url" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/">
+<!-- og:image must be an absolute https URL once deployed; file: assets/og-image.jpg (1200×630) -->
+<meta property="og:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Yak Doma logo over a photo of a guest biting into a shawarma">
+<meta property="og:locale" content="en_IE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yak Doma — Ukrainian Shawarma &amp; Street Food in Dublin 1">
+<meta name="twitter:description" content="Shawarma named after Ukrainian cities, borscht, dumplings, loaded hot dogs and desserts in Dublin 1.">
+<meta name="twitter:image" content="https://orendachanastasiia-dot.github.io/restaurant-landing-concept/assets/og-image.jpg">
+<!-- Icons (generated from the Yak Doma emblem) -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- GA4: вставити тег тут -->
+<!-- Meta Pixel: вставити тут -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   DESIGN TOKENS
+   Direction from references: cream + deep green + checkerboard
+   (smash'd), signal red + chunky rounded wordmark (MA Studio),
+   giant condensed type over food (Food Frenzy), bold labels on
+   full-bleed food tiles (ingredient grid), flash-photo energy
+   for reactions (cap photo).
+   ========================================================== */
+:root{
+  --cream:#F6ECD9;
+  --cream-2:#EFE0C3;
+  --paper:#FBF6EC;
+  --green:#0E4B2F;
+  --green-2:#093621;
+  --red:#C8161D;
+  --red-dark:#9C0F14;
+  --pink:#F3A9C6;
+  --corn:#F2B63D;
+  --beet:#7A1530;
+  --ink:#1A1714;
+  --night:#141210;
+  --sign:#111111;
+  --ua-blue:#0057B7;
+  --ua-yellow:#FFD700;
+
+  --f-display:"Anton", Impact, "Arial Narrow", sans-serif;
+  --f-body:"Archivo", system-ui, sans-serif;
+
+  --wrap:1240px;
+  --gutter:clamp(16px, 4vw, 40px);
+  --radius:22px;
+  --check:44px;
+  --shadow-hard:4px 4px 0 var(--ink);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:400;line-height:.92}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+section[id]{scroll-margin-top:84px}
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:var(--cream);padding:10px 16px;border-radius:10px;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--corn);outline-offset:3px;border-radius:6px}
+
+/* ---------- Shared bits ---------- */
+.checker{height:var(--check);background:repeating-conic-gradient(var(--green) 0 25%, var(--cream) 0 50%) 0 0/calc(var(--check)*2) calc(var(--check)*2)}
+.checker--red{background:repeating-conic-gradient(var(--red) 0 25%, var(--cream) 0 50%) 0 0/calc(var(--check)*2) calc(var(--check)*2)}
+
+.eyebrow{font-family:var(--f-body);font-weight:800;font-stretch:125%;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem}
+.h2{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(3rem,8vw,6.5rem);letter-spacing:.005em}
+.lead{font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:46ch}
+
+.btn{--bg:var(--red);--fg:var(--cream);display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.8em 1.5em;border:2.5px solid var(--ink);border-radius:999px;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;text-decoration:none;box-shadow:var(--shadow-hard);transition:transform .15s ease, box-shadow .15s ease;cursor:pointer;white-space:nowrap}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn--cream{--bg:var(--cream);--fg:var(--ink)}
+.btn--green{--bg:var(--green);--fg:var(--cream)}
+.btn--pink{--bg:var(--pink);--fg:var(--ink)}
+.btn--ghost{--bg:transparent;--fg:currentColor;box-shadow:none;border-color:currentColor}
+.btn--ghost:hover{box-shadow:none;transform:translateY(-2px)}
+.btn--sm{min-height:44px;padding:.6em 1.15em;font-size:.82rem}
+.btn svg{width:1.1em;height:1.1em}
+
+/* placeholder label — makes unverified content obvious */
+.tbc{display:inline-flex;align-items:center;gap:.4em;padding:.2em .6em;border:1.5px dashed currentColor;border-radius:999px;font-size:.72rem;font-weight:700;font-stretch:110%;text-transform:uppercase;letter-spacing:.05em;opacity:.85;white-space:nowrap}
+
+/* ---------- Concept bar ---------- */
+.concept-bar{background:var(--ink);color:var(--cream);text-align:center;font-size:.78rem;padding:.5em var(--gutter);letter-spacing:.02em}
+.concept-bar strong{color:var(--pink);font-weight:700}
+
+/* ---------- 01 Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--sign);color:#fff;border-top:8px solid var(--ua-blue);border-bottom:8px solid var(--ua-yellow)}
+.header__inner{display:flex;align-items:center;gap:1rem;min-height:72px}
+.logo{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--green);margin-right:auto}
+.logo img{height:44px;width:auto}
+.nav ul{display:flex;gap:.25rem}
+.nav a{display:inline-block;padding:.6em .9em;border-radius:999px;text-decoration:none;font-weight:700;font-stretch:112%;text-transform:uppercase;font-size:.85rem;letter-spacing:.05em}
+.nav a:hover{background:rgba(255,255,255,.12)}
+.header__cta{box-shadow:4px 4px 0 #fff}
+.header__cta:hover{box-shadow:6px 6px 0 #fff}
+.nav-toggle{display:none;width:48px;height:48px;border:2.5px solid #fff;border-radius:14px;background:transparent;cursor:pointer;place-items:center}
+.burger,.burger::before,.burger::after{display:block;width:20px;height:2.5px;background:#fff;border-radius:2px;transition:transform .2s ease, opacity .2s ease;content:""}
+.burger{position:relative}
+.burger::before{position:absolute;top:-6px}
+.burger::after{position:absolute;top:6px}
+.nav-toggle[aria-expanded="true"] .burger{background:transparent}
+.nav-toggle[aria-expanded="true"] .burger::before{transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .burger::after{transform:translateY(-6px) rotate(-45deg)}
+
+@media (max-width:760px){
+  .nav-toggle{display:grid}
+  .nav{position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--sign);border-bottom:8px solid var(--ua-yellow);padding:.5rem var(--gutter) 1.25rem;display:none}
+  .nav.is-open{display:block}
+  .nav ul{flex-direction:column}
+  .nav a{display:block;font-family:var(--f-display);font-size:2.2rem;font-weight:400;padding:.25em 0;border-radius:0;border-bottom:2px solid rgba(255,255,255,.14)}
+  .header__cta{display:none}
+  .logo img{height:36px}
+}
+
+/* ---------- 02 Hero ---------- */
+.hero{--fs:clamp(4.6rem,21vw,17.5rem);position:relative;isolation:isolate;background:var(--night);color:var(--cream);overflow:hidden;min-height:min(calc(100svh - 110px),960px);display:flex;align-items:center;padding-block:clamp(40px,6vw,80px)}
+.hero{flex-direction:column;justify-content:flex-start;padding-top:clamp(20px,3vw,44px)!important;padding-bottom:clamp(28px,4vw,56px)!important;min-height:calc(100svh - 104px)!important}
+.hero > .wrap,.hero__inner{width:100%}
+.hero__bg,.hero__cut{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(.72)}
+.hero__bg{z-index:1}
+.hero__cut{z-index:3;pointer-events:none}
+/* darkening only towards the bottom, for the copy & buttons; transparent where the headline sits */
+.hero::before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(180deg,rgba(10,8,6,0) 0%,rgba(10,8,6,0) 40%,rgba(10,8,6,.65) 100%)}
+.hero.no-photo{background:var(--red)}
+.hero.no-photo::before{display:none}
+.hero__kicker{position:relative;z-index:6;display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;text-align:center}
+.hero__kicker .dot{opacity:.6}
+.hero__inner{padding-inline:clamp(10px,1.6vw,24px)}
+.hero__titlewrap{position:relative;margin-top:clamp(12px,1.6vw,22px)}
+.hero__title{position:relative;z-index:2;text-align:center;text-transform:uppercase;font-family:var(--f-body);font-weight:900;font-stretch:100%;line-height:.9}
+/* outline copy painted above the cut-out — text looks transparent where it crosses the photo subject */
+.hero__title--outline{position:absolute;inset:0;z-index:5;color:transparent;-webkit-text-stroke:1.5px var(--cream);pointer-events:none}
+.hero__line{display:block;white-space:nowrap}
+.hero__line > span{display:inline-block}
+.hero > .wrap{margin-top:auto;padding-top:clamp(24px,4vw,48px)}
+.hero__copy{position:relative;z-index:6;display:grid;justify-items:center;gap:1.25rem;text-align:center}
+.hero__copy p{max-width:62ch;font-size:clamp(1.05rem,1.4vw,1.25rem);text-wrap:balance}
+.hero__ctas{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center}
+.hero .btn--ghost{color:var(--cream)}
+
+/* ---------- 03 Signature Shawarma ---------- */
+.section{padding-block:clamp(64px,9vw,120px)}
+.section__head{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem 3rem;align-items:end;margin-bottom:clamp(32px,5vw,56px)}
+.section__head .eyebrow{grid-column:1/-1;color:var(--red)}
+.section__head .side{display:grid;gap:1.2rem;justify-items:start}
+@media (max-width:860px){.section__head{grid-template-columns:1fr}}
+/* section intro: compact 3-line block */
+.section__head .side{justify-self:end}
+.section__head .lead{max-width:var(--lead-w,24ch);text-wrap:balance;line-height:1.4}
+@media (max-width:860px){.section__head .side{justify-self:start}}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:clamp(16px,2vw,24px)}
+/* card width is capped so a whole card (4:5 photo + text) fits the screen height under the sticky header */
+.cards--two{--gap:clamp(16px,1.8vw,24px);--hcap:max(240px, calc((100svh - 380px) / 1.25));grid-template-columns:min(100%,var(--hcap));justify-content:center;gap:var(--gap)}
+@media (min-width:640px){.cards--two{grid-template-columns:repeat(2,min(calc((100% - var(--gap)) / 2),var(--hcap)))}}
+@media (min-width:1000px){.cards--two{grid-template-columns:repeat(3,min(calc((100% - 2 * var(--gap)) / 3),var(--hcap)))}}
+.card--extras .card__media{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.4rem;text-align:center;padding:20px}
+.card--extras .extras__big{font-family:var(--f-body);font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:clamp(2.4rem,4.4vw,4rem);line-height:.9;letter-spacing:-.03em;color:var(--cream)}
+.card--extras .extras__plus{font-family:var(--f-display);font-size:clamp(4rem,8vw,7rem);line-height:.8;color:var(--pink)}
+.card--extras .rows{margin-top:.2rem}
+.card--extras .row{padding:.45rem 0}
+.card--extras .row__name{font-size:.88rem}
+.card--extras .row__price{font-size:1.3rem}
+.cards--two .card__media{aspect-ratio:4/5}
+.cards--two .card__media img{object-position:center top}
+.cards--two .card__body{padding:18px 22px 20px;gap:.5rem}
+.cards--two .card__title{font-size:clamp(2.1rem,2.8vw,2.8rem)}
+.cards--two .card__desc{font-size:.98rem}
+.cards--two .price{font-size:2.1rem}
+.card{display:flex;flex-direction:column;background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
+.card__media{position:relative;aspect-ratio:4/3;display:grid;place-items:center;border-bottom:2.5px solid var(--ink);overflow:hidden}
+.card__media img{width:100%;height:100%;object-fit:cover}
+.card__media .art{width:52%;height:auto}
+.card__media .tbc{position:absolute;left:12px;top:12px;background:inherit}
+.card__body{display:flex;flex-direction:column;gap:.55rem;padding:18px 18px 20px;flex:1}
+.card__kicker{font-size:.72rem;font-weight:800;font-stretch:120%;text-transform:uppercase;letter-spacing:.08em;color:var(--red)}
+.card__title{font-family:var(--f-display);text-transform:uppercase;font-size:2.6rem;line-height:.95}
+.card__desc{font-size:.95rem;color:#4a423a}
+.card__note{align-self:flex-start;color:#6b5f52}
+.card__foot{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:auto;padding-top:.75rem}
+.price{font-family:var(--f-display);font-size:1.9rem;line-height:1;color:var(--green)}
+
+.tone-green{background:var(--green);color:var(--pink)}
+.tone-red{background:var(--red);color:var(--cream)}
+.tone-cream{background:var(--cream-2);color:var(--green)}
+.tone-pink{background:var(--pink);color:var(--green)}
+.tone-corn{background:var(--corn);color:var(--ink)}
+.tone-beet{background:var(--beet);color:var(--pink)}
+
+.inline-link{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;margin-left:.4em;padding:.15em .55em;border-radius:999px;background:var(--corn);color:var(--ink);font-size:.95em;letter-spacing:.06em;vertical-align:1px}
+.card__tagline{font-weight:700;font-size:.98rem;line-height:1.35}
+.row__sub{display:block;margin-top:.15rem;font-weight:500;font-stretch:100%;text-transform:none;letter-spacing:0;font-size:.82rem;color:#6b5f52}
+.ticket__group{margin:1.3rem 0 0;font-family:var(--f-body);font-weight:800;font-stretch:120%;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.addons{margin-top:2rem;font-size:.95rem;max-width:80ch}
+.addons strong{font-weight:800;font-stretch:115%;text-transform:uppercase;letter-spacing:.04em;font-size:.82rem;color:var(--red);margin-right:.35em}
+.source-note{margin-top:1.75rem;font-size:.82rem;color:#6b5f52}
+
+/* ---------- 04 Taste of Ukraine (ingredient-grid reference) ---------- */
+.ukraine{background:var(--paper)}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);border:2.5px solid var(--ink);border-radius:var(--radius);overflow:hidden}
+.tile{position:relative;aspect-ratio:1/1;}
+@media (min-width:761px){.tile{aspect-ratio:16/10}}
+.tile{display:grid;place-items:center;overflow:hidden;isolation:isolate}
+.tile:nth-child(odd){border-right:2.5px solid var(--ink)}
+.tile:nth-child(-n+2){border-bottom:2.5px solid var(--ink)}
+.tile .art{position:absolute;width:78%;opacity:.35;z-index:-1}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+.tile__label{font-family:var(--f-body);font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:clamp(1.3rem,4vw,3.4rem);letter-spacing:.01em;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.25);text-align:center;padding-inline:8px}
+.tile__cap{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap;font-size:.85rem;font-weight:700;color:#fff}
+.tile__cap .tbc{color:#fff}
+.tile.tone-cream .tile__label,.tile.tone-cream .tile__cap,.tile.tone-cream .tile__cap .tbc{color:var(--green);text-shadow:none}
+.tile.tone-corn .tile__label,.tile.tone-corn .tile__cap,.tile.tone-corn .tile__cap .tbc{color:var(--ink);text-shadow:none}
+.tile.has-img .art{display:none}
+.tile.has-img::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,10,6,.18) 0%,rgba(15,10,6,.38) 100%)}
+.tile.has-img .tile__label,.tile.has-img .tile__cap,.tile.has-img .tile__cap .tbc{color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.also{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.also span.pill{padding:.45em .9em;border:2px solid var(--ink);border-radius:999px;font-weight:700;font-size:.85rem;background:var(--cream)}
+@media (max-width:520px){.tile__cap{font-size:.72rem;left:10px;right:10px;bottom:10px}.tile__cap .tbc{display:none}}
+
+/* ---------- 05 Something Sweet ---------- */
+.sweet{background:var(--pink);color:var(--green)}
+.sweet .section__head .eyebrow{color:var(--red-dark)}
+.sweet .card{background:var(--cream)}
+@media (min-width:561px){.cards--three{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cards--three{grid-template-columns:repeat(4,1fr)}}
+.cards--three .card__media{aspect-ratio:1/1}
+.sweet .card__title{font-size:2rem;color:var(--ink)}
+
+/* ---------- 06 Combos & Extras ---------- */
+.combos{background:var(--green);color:var(--cream)}
+.combos .section__head .eyebrow{color:var(--pink)}
+.combo-grid{display:grid;align-items:stretch;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+@media (max-width:980px){.combo-grid{grid-template-columns:1fr}}
+.ticket{background:var(--cream);color:var(--ink);border:2.5px solid var(--ink);border-radius:var(--radius);padding:clamp(20px,3vw,32px)}
+.ticket__title{font-family:var(--f-display);text-transform:uppercase;font-size:2.2rem;line-height:1}
+.ticket__sub{margin-top:.35rem;font-size:.92rem;color:#5a5047}
+.rows{margin-top:1.1rem}
+.row{display:flex;align-items:baseline;gap:.6rem;padding:.75rem 0;border-top:2px dashed #cdbd9f}
+.row__name{font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:.02em}
+.row__fill{flex:1;border-bottom:2px dotted #b9a888;transform:translateY(-4px);min-width:16px}
+.row__price{font-family:var(--f-display);font-size:1.55rem;line-height:1;color:var(--red)}
+.row .tbc{font-size:.66rem}
+.extras{display:contents}
+.combos__cta{margin-top:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.combos .source-note{color:#bcd2c4}
+
+/* ---------- 07 Customer Reactions ---------- */
+.reactions{background:var(--night);color:var(--cream)}
+.reactions .section__head .eyebrow{color:var(--pink)}
+.reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+@media (max-width:760px){.reels{grid-template-columns:repeat(4,72%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter)}.reel{scroll-snap-align:start}}
+.reel{position:relative;aspect-ratio:1/2.167;border-radius:var(--radius);overflow:hidden;border:2px solid #3a332c;background:radial-gradient(120% 90% at 50% 38%, #4a3f35 0%, #241e19 45%, #0d0b09 100%);display:grid;place-items:center;text-align:center;padding:24px}
+.reel::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 40%, rgba(255,240,220,.18), transparent 70%);pointer-events:none}
+.reel__icon{width:64px;height:64px;border-radius:50%;border:2.5px solid var(--cream);display:grid;place-items:center;margin:0 auto 14px}
+.reel__icon svg{width:22px;height:22px;transform:translateX(2px)}
+.reel p{font-size:.92rem;max-width:22ch;margin-inline:auto;color:#e8dcc6}
+.reel--photo{padding:0;background:#0d0b09}
+.reel--photo::before{display:none}
+.reel__bg,.reel__fg{position:absolute;inset:0;background-image:var(--img);background-repeat:no-repeat;background-position:center}
+.reel__bg{background-size:cover;filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.reel__fg{background-size:contain}
+.reel--video{padding:0;background:#000}
+.reel--video::before{display:none}
+.reel--video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.reel__mask{position:absolute;left:0;right:0;top:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,#0d0b09 0%,#0d0b09 86%,rgba(13,11,9,0) 100%)}
+.reel .tbc{position:absolute;top:14px;left:14px;color:var(--pink)}
+.reactions__foot{margin-top:clamp(24px,3vw,36px);display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;justify-content:space-between}
+.reactions__foot p{max-width:58ch;color:#cfc3ad;font-size:.95rem}
+
+/* ---------- 08 Visit ---------- */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);align-items:stretch}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}}
+.info{display:grid;gap:0;border:2.5px solid var(--ink);border-radius:var(--radius);background:var(--paper);overflow:hidden}
+.info__row{display:grid;grid-template-columns:120px 1fr;gap:1rem;padding:18px 22px;border-bottom:2px solid var(--cream-2);align-items:start}
+.info__row:last-child{border-bottom:0}
+.info dt{font-weight:800;font-stretch:120%;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;color:var(--red);padding-top:.25em}
+.info dd{margin:0;display:grid;gap:.35rem;justify-items:start}
+.info dd strong{font-family:var(--f-display);font-weight:400;font-size:1.6rem;text-transform:uppercase;line-height:1}
+@media (max-width:480px){.info__row{grid-template-columns:1fr;gap:.35rem}}
+.visit__ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.5rem}
+.map{position:relative;min-height:340px;border:2.5px solid var(--ink);border-radius:var(--radius);overflow:hidden;background:var(--green);color:var(--cream);display:grid;place-items:center;text-align:center;padding:28px}
+.map::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(rgba(246,236,217,.07) 0 25%, transparent 0 50%) 0 0/64px 64px}
+.map__pin{width:72px;margin:0 auto 12px;color:var(--pink)}
+.map p{position:relative;max-width:30ch}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}
+.map__fallback{position:relative;z-index:0}
+/* brand badge pinned next to the Google marker (marker sits at the map centre on load) */
+.map__badge{position:absolute;z-index:2;left:calc(50% - 78px);top:calc(50% - 74px);width:58px;height:58px;border-radius:50%;background:#111;border:3px solid #fff;box-shadow:0 6px 16px rgba(0,0,0,.35);display:grid;place-items:center;pointer-events:none}
+.map__badge img{width:62%;height:auto}
+
+/* ---------- 09 Footer ---------- */
+.site-footer{background:var(--sign);color:var(--cream);padding-block:clamp(48px,7vw,80px) 28px}
+.footer__logo{width:clamp(240px,34vw,440px);height:auto}
+.footer__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:clamp(28px,4vw,48px);padding-top:28px;border-top:2px solid rgba(246,236,217,.18)}
+@media (max-width:760px){.footer__grid{grid-template-columns:1fr 1fr}}
+.footer__grid h2{font-family:var(--f-body);font-weight:800;font-stretch:120%;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pink);margin-bottom:.8rem;line-height:1.2}
+.footer__grid li{margin-bottom:.4rem}
+.footer__grid .tbc{white-space:normal}
+.footer__grid > div{min-width:0}
+.footer__grid a{text-decoration:none}
+.footer__grid a:hover{text-decoration:underline}
+.footer__legal{margin-top:36px;font-size:.8rem;color:#a8a29a;display:grid;gap:.4rem}
+
+/* ---------- Mobile sticky order bar ---------- */
+.order-bar{display:none}
+@media (max-width:760px){
+  .order-bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;transition:transform .25s ease}
+  .order-bar .btn{flex:1;min-height:54px;font-size:1rem}
+  .order-bar.is-hidden{transform:translateY(140%)}
+  body{padding-bottom:84px}
+}
+</style>
+<script>
+/* ---------- Hero photo ---------- */
+function heroPhotoError(img){
+  const orig = img.src.replace(/\/upload\/[^/]*,[^/]*\//, "/upload/");
+  if (orig !== img.src && !img.dataset.retried){ img.dataset.retried = "1"; img.src = orig; return; }
+  img.remove(); document.querySelector(".hero").classList.add("no-photo");
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ======= SVG SPRITE: original line illustrations (placeholders until real food photography is supplied) ======= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-shawarma" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M38 30 L82 30 L73 104 Q60 112 47 104 Z"/><path d="M42 66 L78 66"/><path d="M44 80 L76 80"/><path d="M50 72 l6 4 l6 -4 l6 4"/><path d="M34 32 Q38 18 48 26 Q54 12 62 24 Q70 12 76 26 Q86 20 86 32"/><circle cx="50" cy="40" r="3"/><circle cx="68" cy="44" r="3"/><path d="M58 38 l4 8"/></g></symbol>
+    <symbol id="i-bowl" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 58 H104 Q102 96 60 100 Q18 96 16 58 Z"/><path d="M40 100 L36 108 H84 L80 100"/><path d="M46 44 q-7 -8 0 -16 q7 -8 0 -16"/><path d="M60 44 q-7 -8 0 -16 q7 -8 0 -16"/><path d="M74 44 q-7 -8 0 -16 q7 -8 0 -16"/><path d="M50 58 q10 -12 20 0"/><path d="M84 52 l8 -6 M88 56 l10 -4"/></g></symbol>
+    <symbol id="i-dumplings" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="60" cy="84" rx="50" ry="16"/><path d="M18 76 Q30 40 54 74 Z"/><path d="M24 62 l4 3 M30 54 l3 4 M38 52 l1 5 M46 58 l-1 5"/><path d="M50 74 Q66 32 92 72 Z"/><path d="M58 56 l4 3 M66 46 l2 5 M76 46 l0 5 M84 54 l-2 5"/><path d="M70 82 Q86 58 104 80"/><path d="M40 92 h6 M60 96 h8"/></g></symbol>
+    <symbol id="i-plate" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="60" cy="80" rx="52" ry="18"/><ellipse cx="60" cy="80" rx="36" ry="11"/><path d="M30 76 Q34 46 56 50 Q64 36 76 50 Q92 48 90 76"/><path d="M50 60 q6 -6 12 0 M66 58 q5 -5 10 0"/><path d="M96 30 v26 M90 30 v12 q0 6 6 6 q6 0 6 -6 v-12"/></g></symbol>
+    <symbol id="i-hotdog" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 66 Q14 50 30 50 H90 Q106 50 106 66 Q106 82 90 82 H30 Q14 82 14 66 Z"/><path d="M6 62 Q6 56 14 56 H106 Q114 56 114 62 Q114 68 106 68 H14 Q6 68 6 62 Z"/><path d="M22 58 l8 6 l8 -6 l8 6 l8 -6 l8 6 l8 -6 l8 6 l8 -6 l8 6"/></g></symbol>
+    <symbol id="i-cake" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 92 L104 92 L104 60 L16 38 Z"/><path d="M16 56 L104 76"/><path d="M16 72 L104 86" stroke-dasharray="2 7"/><path d="M16 38 Q26 48 36 43 Q46 52 56 48 Q66 58 76 54 Q88 64 104 60"/><circle cx="62" cy="34" r="7"/><path d="M62 27 q4 -10 12 -12"/></g></symbol>
+    <symbol id="i-pastry" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 74 Q24 40 60 38 Q96 40 106 74 Q60 90 14 74 Z"/><path d="M34 52 Q44 70 40 80 M60 40 Q62 62 60 84 M86 52 Q76 70 80 80"/><path d="M30 30 l4 -6 M60 22 v-8 M90 30 l-4 -6"/></g></symbol>
+    <symbol id="i-cup" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M36 34 H84 L77 106 H43 Z"/><path d="M32 34 H88"/><path d="M62 34 L72 10 H84"/><path d="M40 60 H80"/><circle cx="52" cy="78" r="3"/><circle cx="64" cy="88" r="3"/><circle cx="66" cy="72" r="2"/></g></symbol>
+    <symbol id="i-fries" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 54 H90 L82 108 H38 Z"/><path d="M40 54 L36 18 M52 54 L50 12 M64 54 L66 16 M76 54 L82 22 M46 54 L44 28 M70 54 L72 28"/><path d="M44 78 q16 10 32 0"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 100 100"><path fill="currentColor" d="M50 2 L58 30 L86 14 L70 42 L98 50 L70 58 L86 86 L58 70 L50 98 L42 70 L14 86 L30 58 L2 50 L30 42 L14 14 L42 30 Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 80 100"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"><path d="M40 96 C20 66 8 52 8 34 a32 32 0 0 1 64 0 c0 18 -12 32 -32 62 Z"/><circle cx="40" cy="34" r="12"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3 L21 12 L6 21 Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12 H19 M13 6 L19 12 L13 18"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept-bar" role="note"><strong>Design concept</strong> — independent proposal, not an official Yak Doma website.</div>
+
+<!-- ======= 01 HEADER ======= -->
+<header class="site-header">
+  <div class="wrap header__inner">
+    <!-- Logo traced from Yak Doma's own signage (Instagram profile photo). Swap for the original vector file when available. -->
+    <a class="logo" href="#top">
+      <img src="assets/logo-sign-white.png" alt="Yak Doma — back to top" width="1192" height="268">
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#food">Our Food</a></li>
+        <li><a href="#find-us">Find Us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--sm header__cta" data-order href="#">Order Now</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="burger" aria-hidden="true"></span><span class="sr-only">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======= 02 HERO ======= -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <img class="hero__bg" src="assets/hero-2400.jpg" srcset="assets/hero-1200.jpg 1200w, assets/hero-2400.jpg 2400w" sizes="100vw" alt="" width="2400" height="1354" fetchpriority="high" decoding="async">
+  <img class="hero__cut" srcset="assets/hero-cut-1200.webp 1200w, assets/hero-cut-2400.webp 2400w" sizes="100vw" src="assets/hero-cut-1200.webp" alt="" width="2400" height="1354" decoding="async">
+  <div class="hero__inner">
+    <p class="hero__kicker eyebrow"><span>Dublin 1</span><span class="dot" aria-hidden="true">●</span><span>Dine-in &amp; takeaway</span></p>
+    <div class="hero__titlewrap">
+      <h1 class="hero__title" id="hero-title"><span class="sr-only">Bold Ukrainian Flavour</span><span class="hero__lines" aria-hidden="true"><span class="hero__line" style="font-size:7vw"><span>Bold Ukrainian Flavour</span></span></span></h1>
+      <div class="hero__title hero__title--outline" aria-hidden="true"><span class="hero__lines"></span></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero__copy">
+      <p>From loaded shawarma to Ukrainian comfort food — come hungry, leave happy.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--cream" data-order href="#">Order Now <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="#menu">Explore the Menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="checker" aria-hidden="true"></div>
+
+<!-- ======= 03 SIGNATURE SHAWARMA ======= -->
+<section class="section" id="menu" aria-labelledby="shawarma-title">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">01 — Regional shawarma</p>
+      <h2 class="h2" id="shawarma-title">Signature<br>Shawarma</h2>
+      <div class="side">
+        <p class="lead">Five shawarma, each named after a Ukrainian city. Pick your route.</p>
+      </div>
+    </div>
+    <div class="cards cards--two" data-render="shawarma"></div>
+    <p class="source-note">Names, fillings and prices from Yak Doma’s in-store menu and Deliveroo listing, Oct 2026. Prices may change.</p>
+  </div>
+</section>
+
+<!-- ======= 04 A TASTE OF UKRAINE ======= -->
+<section class="section ukraine" id="food" aria-labelledby="ukraine-title">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">02 — Our food</p>
+      <h2 class="h2" id="ukraine-title">A Taste<br>of Ukraine</h2>
+      <div class="side">
+        <p class="lead">Borscht, dumplings, banosh and more — comforting dishes inspired by Ukrainian cuisine.</p>
+        <a class="btn btn--green" data-order href="#">Order Now</a>
+      </div>
+    </div>
+    <div class="tiles" data-render="ukraine"></div>
+    <div class="also">
+      <span class="eyebrow" style="margin-right:.25rem">Also on the menu:</span>
+      <span class="pill">Mashed potatoes with chicken chop</span>
+      <span class="pill">Olivier salad</span>
+      <span class="pill">Greek salad</span>
+      <span class="tbc">Prices &amp; availability TBC</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 05 SOMETHING SWEET ======= -->
+<section class="section sweet" aria-labelledby="sweet-title">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">03 — Desserts &amp; bakes</p>
+      <h2 class="h2" id="sweet-title">Something<br>Sweet</h2>
+      <div class="side">
+        <p class="lead">Save room for something sweet — fruity mousse desserts and chocolate cups.</p>
+        <span class="tbc">Official names &amp; prices TBC</span>
+      </div>
+    </div>
+    <div class="cards cards--three" data-render="sweets"></div>
+  </div>
+</section>
+
+<div class="checker checker--red" aria-hidden="true"></div>
+
+<!-- ======= 06 COMBOS & EXTRAS ======= -->
+<section class="section combos" aria-labelledby="combos-title">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">04 — Make it a meal</p>
+      <h2 class="h2" id="combos-title">Combos<br>&amp; Extras</h2>
+      <div class="side"><p class="lead">Shawarma, fries and a drink in one go — plus loaded hot dogs, coffee and soft drinks.</p></div>
+    </div>
+    <div class="combo-grid">
+      <div class="ticket">
+        <h3 class="ticket__title">Journeys in Ukraine</h3>
+        <p class="ticket__sub">Tasty combos</p>
+        <ul class="rows" data-render="combos"></ul>
+      </div>
+      <div class="extras">
+        <div class="ticket">
+          <h3 class="ticket__title">Loaded Hot Dogs</h3>
+          <ul class="rows" data-render="hotdogs"></ul>
+          <h4 class="ticket__group">Sides</h4>
+          <ul class="rows" data-render="sides"></ul>
+        </div>
+        <div class="ticket">
+          <h3 class="ticket__title">Coffee &amp; Drinks</h3>
+          <ul class="rows" data-render="coffee"></ul>
+          <h4 class="ticket__group">Soft drinks</h4>
+          <ul class="rows" data-render="drinks"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="combos__cta">
+      <a class="btn" data-order href="#">Order Now <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="source-note" style="margin:0">Prices from Yak Doma’s in-store menu and Deliveroo, Oct 2026. Prices may change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 07 CUSTOMER REACTIONS ======= -->
+<section class="section reactions" aria-labelledby="reactions-title">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">05 — First bites</p>
+      <h2 class="h2" id="reactions-title">Customer<br>Reactions</h2>
+      <div class="side"><p class="lead">Real people, real first bites — shared by our guests on Instagram and in their stories.</p></div>
+    </div>
+    <div class="reels" data-render="reels"></div>
+    <div class="reactions__foot">
+      <p>Real reactions shared by our guests on Instagram.</p>
+      <a class="btn btn--pink" href="https://www.instagram.com/yakdomadublin1/" target="_blank" rel="noopener noreferrer">Follow @yakdomadublin1<span class="sr-only"> Yak Doma on Instagram (opens in a new tab)</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 08 VISIT ======= -->
+<section class="section" id="find-us" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">06 — Find us</p>
+      <h2 class="h2" id="visit-title">Visit<br>Yak Doma</h2>
+      <div class="side"><p class="lead">Eat in at Dublin 1, grab a takeaway or get it delivered to your door — your call.</p></div>
+    </div>
+    <div class="visit-grid">
+      <div>
+        <dl class="info">
+          <div class="info__row"><dt>Where</dt><dd><strong>Yak Doma</strong><span>Dublin 1, D01 XP94</span><span>Dine-in &amp; takeaway</span></dd></div>
+          <div class="info__row"><dt>Hours</dt><dd><strong>11:00 – 21:00</strong></dd></div>
+          <div class="info__row"><dt>Allergens</dt><dd><span>Allergen information available on request</span></dd></div>
+          <div class="info__row"><dt>Phone</dt><dd><span class="tbc">To confirm</span></dd></div>
+          <div class="info__row"><dt>Social</dt><dd><a class="inline-link" href="https://www.instagram.com/yakdomadublin1/" target="_blank" rel="noopener noreferrer">@yakdomadublin1 on Instagram<span class="sr-only">  (opens in a new tab)</span></a><a class="inline-link" href="https://www.tiktok.com/@yak.doma.dublin" target="_blank" rel="noopener noreferrer">@yak.doma.dublin on TikTok<span class="sr-only">  (opens in a new tab)</span></a></dd></div>
+        </dl>
+        <div class="visit__ctas">
+          <a class="btn" data-order href="#">Order Now</a>
+          <a class="btn btn--cream" href="https://www.google.com/maps/search/?api=1&amp;query=Yak+Doma+D01+XP94+Dublin" target="_blank" rel="noopener noreferrer">Get Directions<span class="sr-only"> (opens Google Maps in a new tab)</span></a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Yak+Doma,+D01+XP94,+Dublin&amp;output=embed" title="Map: Yak Doma, Dublin D01 XP94" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <span class="map__badge" aria-hidden="true"><img loading="lazy" src="assets/logo-emblem-white.png" alt="" width="160" height="164"></span>
+        <div class="map__fallback"><svg class="map__pin" aria-hidden="true"><use href="#i-pin"/></svg><p>Yak Doma · Dublin 1, D01 XP94</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======= 09 FOOTER ======= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="footer__logo" src="assets/logo-sign-white.png" alt="Yak Doma" width="1192" height="268" loading="lazy">
+    <div class="footer__grid">
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#food">Our Food</a></li>
+          <li><a href="#find-us">Find Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Order &amp; follow</h2>
+        <ul>
+          <li><a data-order href="#">Order on Deliveroo</a></li>
+          <li><a class="" href="https://www.instagram.com/yakdomadublin1/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> — Yak Doma (opens in a new tab)</span></a></li>
+          <li><a class="" href="https://www.tiktok.com/@yak.doma.dublin" target="_blank" rel="noopener noreferrer">TikTok<span class="sr-only"> — Yak Doma (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li>Dublin 1, D01 XP94</li>
+          <li>Open 11:00 – 21:00</li>
+          <li><span class="tbc">Phone / email — to confirm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>Privacy &amp; cookie policy — to be added for the production website.</p>
+      <p>Independent design concept prepared as a proposal. Not affiliated with or approved by Yak Doma.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="order-bar" id="order-bar"><a class="btn" data-order href="#">Order Now <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+
+<script>
+/* ==========================================================
+   CONTENT — edit here. Fields marked verified:false render
+   with a "TBC" label so placeholders stay obvious.
+   Photo: set `img` to an image path to replace the illustration.
+   ========================================================== */
+const ORDER_URL = "https://deliveroo.ie/menu/dublin/dublin-1/yak-doma/";
+
+const CONTENT = {
+  // Source: Deliveroo listing, 16 Oct 2026
+  shawarma: [
+    { name:"Kyiv",    img:"assets/shawarma-kyiv.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, tomatoes, pickles, Korean-style carrots", price:"€11.00", tone:"green", note:"Same fillings as Lviv — difference TBC" },
+    { name:"Odesa",   img:"assets/shawarma-odesa.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, fries, cabbage, tomatoes, pickles, Korean-style carrots", price:"€13.50", tone:"red", badge:"Best seller", tagline:"Black Sea classic — juicy, fresh, packed with veggies & protein." },
+    { name:"Lviv",    img:"assets/shawarma-lviv.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, tomatoes, pickles, Korean-style carrots", price:"€8.50", tone:"cream", note:"Same fillings as Kyiv — difference TBC" },
+    { name:"Donbass", img:"assets/shawarma-donbass.jpg", w:800, h:1200, desc:"Chicken, cheese, garlic sauce, American light sauce", price:"€15.00", tone:"corn" },
+    { name:"Hawaii",  img:"assets/shawarma-hawaii.jpg", w:800, h:1200, desc:"Chicken, garlic sauce, cabbage, sweet corn, mozzarella, cheese sauce, pineapple", price:"€13.50", tone:"pink" }
+  ],
+  // Names from menu materials; prices not verified
+  ukraine: [
+    { label:"Borscht", w:762, h:522, img:"assets/dish-borscht.jpg",   name:"Borscht", art:"bowl", tone:"beet" },
+    { label:"Dumplings", w:762, h:522, img:"assets/dish-dumplings.jpg", name:"Dumplings with potatoes", art:"dumplings", tone:"cream" },
+    { label:"Banosh", w:762, h:490, img:"assets/dish-banosh.jpg",    name:"Banosh with cracklings & feta", art:"plate", tone:"corn" },
+    { label:"Goulash", w:1200, h:772, img:"assets/dish-goulash.jpg",   name:"Mashed potatoes with goulash", art:"plate", tone:"green" }
+  ],
+  // Unconfirmed — replace with real products from menu photos
+  // Dessert photos (assets/sweet-1..4.jpg). Titles describe the photo — official names & prices TBC
+  sweets: [
+    { name:"Blueberry dessert", img:"assets/sweet-1.jpg", alt:"Round purple blueberry-shaped mousse desserts on gold bases", tone:"cream" },
+    { name:"Chocolate & passion fruit", img:"assets/sweet-2.jpg", alt:"Chocolate cups filled with cream and topped with passion fruit", tone:"cream" },
+    { name:"Mango dessert", img:"assets/sweet-3.jpg", alt:"Yellow and pink mango-shaped mousse desserts on gold bases", tone:"cream" },
+    { name:"Raspberry dessert", img:"assets/sweet-4.jpg", alt:"Bright red raspberry-shaped mousse desserts on gold bases", tone:"cream" }
+  ],
+  // Source: Yak Doma in-store menu (Instagram post) + Deliveroo listing, Oct 2026
+  extras: [
+    { name:"Cheese", price:"€1.50" },
+    { name:"Extra meat", price:"€2.50" },
+    { name:"Extra sauce", price:"€0.70" },
+    { name:"Sweetcorn", price:"€0.70" },
+    { name:"Jalapeños", price:"€0.70" },
+    { name:"Extra fries", price:"€1.00" },
+    { name:"Pineapple", price:"€1.00" }
+  ],
+  combos: [
+    { name:"Odesa Combo",   sub:"Shawarma + fries + drink", price:"€19.99" },
+    { name:"Kyiv Combo",    sub:"Shawarma + fries + drink", price:"€17.49" },
+    { name:"Lviv Combo",    sub:"Shawarma + fries + drink", price:"€14.99" },
+    { name:"Donbass Combo", sub:"Shawarma + fries + drink", price:"€21.49" },
+    { name:"Hot-Dog Combo", sub:"Hot dog + macarons + coffee", price:"€13.99" }
+  ],
+  hotdogs: [
+    { name:"Bacon & Cheese", sub:"Best choice — smoky, cheesy, on a soft bun", price:"€5.00" },
+    { name:"Classic", price:"€4.50" },
+    { name:"Chilli", price:"€4.50" },
+    { name:"Kabanos", price:"€5.00" }
+  ],
+  sides: [
+    { name:"Fries", price:"€4.50" }
+  ],
+  coffee: [
+    { name:"Espresso", price:"€3.50" },
+    { name:"Americano", price:"€4.00" },
+    { name:"Flat White / Cappuccino / Latte", price:"€4.50" },
+    { name:"Hot Chocolate", price:"€4.00" },
+    { name:"Extra milk", price:"€0.50" }
+  ],
+  drinks: [
+    { name:"Coca-Cola / Fanta / Sprite / 7UP", price:"€2.50" },
+    { name:"Airan", price:"€2.50" },
+    { name:"Red Bull", price:"€3.00" },
+    { name:"Water / Tea", price:"€2.00" }
+  ],
+  // Customer reactions: video – photo – video – photo (usernames cropped/blurred from the story screenshots)
+  reels: [
+    { vimeo:"1236592186", title:"Customer reaction video" },
+    { photo:"assets/review-1.jpg", alt:"Customer story: two shawarma wraps with garlic sauce, captioned 'Thank you! So tasty! Delicious!'" },
+    { vimeo:"1236597205", title:"Customer reaction video", maskTop:25 }, // maskTop: % of the top hidden (covers the reposted account name baked into the video)
+    { photo:"assets/review-2.jpg", alt:"Customer story: borscht with rye bread and Olivier salad, captioned 'Bon appetite, provided by @yakdomadublin1'" }
+  ]
+};
+
+/* ---------- Components ---------- */
+// If a resized Cloudinary URL fails, try the original; if that fails too, show a labelled placeholder
+function imgFallback(img){
+  const orig = img.src.replace(/\/upload\/[^/]*,[^/]*\//, "/upload/");
+  if (orig !== img.src && !img.dataset.retried){ img.dataset.retried = "1"; img.src = orig; return; }
+  const box = img.parentElement; img.remove();
+  box.insertAdjacentHTML("beforeend", '<svg class="art" aria-hidden="true"><use href="#i-cake"/></svg><span class="tbc">Photo unavailable</span>');
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tbc = t => `<span class="tbc">${esc(t)}</span>`;
+const media = (item, art, alt) => item.img
+  ? `<img src="${esc(item.img)}" alt="${esc(alt)}" loading="lazy" decoding="async" width="${item.w || 900}" height="${item.h || 900}" onerror="imgFallback(this)">`
+  : `<svg class="art" aria-hidden="true"><use href="#i-${art}"/></svg>${tbc("Photo to come")}`;
+const orderBtn = (label, sr, cls="btn btn--sm") =>
+  `<a class="${cls}" href="${ORDER_URL}" target="_blank" rel="noopener noreferrer">${label}<span class="sr-only"> ${esc(sr)} on Deliveroo (opens in a new tab)</span></a>`;
+
+const ProductCard = (p, kicker, art) => `
+  <article class="card">
+    <div class="card__media tone-${p.tone}">${media(p, art, p.name + " shawarma")}</div>
+    <div class="card__body">
+      <p class="card__kicker">${esc(kicker)}${p.badge ? ` <span class="badge">${esc(p.badge)}</span>` : ""}</p>
+      <h3 class="card__title">${esc(p.name)}</h3>
+      ${p.tagline ? `<p class="card__tagline">${esc(p.tagline)}</p>` : ""}
+      ${p.desc ? `<p class="card__desc">${esc(p.desc)}</p>` : ""}
+      ${p.note ? `<span class="tbc card__note">${esc(p.note)}</span>` : ""}
+      <div class="card__foot">
+        ${p.price ? `<span class="price">${esc(p.price)}</span>` : tbc("Price TBC")}
+        ${orderBtn("Order", p.name)}
+      </div>
+    </div>
+  </article>`;
+
+const SweetCard = p => `
+  <article class="card">
+    <div class="card__media tone-${p.tone}">${media(p, p.art, p.alt || p.name)}</div>
+    <div class="card__body">
+      <p class="card__kicker">Desserts</p>
+      <h3 class="card__title">${esc(p.name)}</h3>
+      <span class="tbc card__note">Official name &amp; price TBC</span>
+    </div>
+  </article>`;
+
+const Tile = d => `
+  <figure class="tile tone-${d.tone}${d.img ? " has-img" : ""}" style="margin:0">
+    ${d.img ? `<img src="${esc(d.img)}" alt="${esc(d.name)}" loading="lazy" decoding="async" width="${d.w || 800}" height="${d.h || 600}">` : `<svg class="art" aria-hidden="true"><use href="#i-${d.art}"/></svg>`}
+    <span class="tile__label" aria-hidden="true">${esc(d.label)}</span>
+    <figcaption class="tile__cap"><span>${esc(d.name)}</span>${d.price ? `<span>${esc(d.price)}</span>` : tbc(d.img ? "Price TBC" : "Photo & price TBC")}</figcaption>
+  </figure>`;
+
+const Row = r => `
+  <li class="row"><span class="row__name">${esc(r.name)}${r.sub ? `<small class="row__sub">${esc(r.sub)}</small>` : ""}</span><span class="row__fill" aria-hidden="true"></span>${r.price ? `<span class="row__price">${esc(r.price)}</span>` : tbc("Price TBC")}</li>`;
+
+const Reel = r => r.photo ? `
+  <div class="reel reel--photo" role="img" aria-label="${esc(r.alt || "Customer photo")}" style="--img:url('${r.photo}')">
+    <span class="reel__bg" aria-hidden="true"></span><span class="reel__fg" aria-hidden="true"></span>
+  </div>` : r.vimeo ? `
+  <div class="reel reel--video">
+    <iframe src="https://player.vimeo.com/video/${esc(r.vimeo)}?badge=0&autopause=0&title=0&byline=0&portrait=0&loop=1&dnt=1" title="${esc(r.title || "Customer video")}" loading="lazy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>${r.maskTop ? `<span class="reel__mask" style="height:${+r.maskTop}%" aria-hidden="true"></span>` : ""}
+  </div>` : `
+  <div class="reel">${tbc("Placeholder")}
+    <div><span class="reel__icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span><p>${esc(r.text)}</p></div>
+  </div>`;
+
+const render = (key, fn) => { const el = document.querySelector(`[data-render="${key}"]`); if (el) el.innerHTML = CONTENT[key].map(fn).join(""); };
+render("shawarma", p => ProductCard(p, "Regional shawarma", "shawarma"));
+{ const el = document.querySelector('[data-render="shawarma"]');
+  if (el) el.insertAdjacentHTML("beforeend", `
+  <article class="card card--extras">
+    <div class="card__media tone-green"><span class="extras__plus" aria-hidden="true">+</span><span class="extras__big">Add<br>extra</span></div>
+    <div class="card__body">
+      <p class="card__kicker">Make it yours</p>
+      <ul class="rows">${CONTENT.extras.map(Row).join("")}</ul>
+    </div>
+  </article>`); }
+render("ukraine", Tile);
+render("sweets", SweetCard);
+render("combos", Row);
+render("hotdogs", Row);
+render("sides", Row);
+render("coffee", Row);
+render("drinks", Row);
+render("reels", Reel);
+
+/* Vimeo reels: never reach Vimeo's end screen (which shows the uploader's name).
+   The embed loops (fallback if the API script can't load); with the API we pause on the first frame when it wraps around. */
+(function(){
+  const frames = document.querySelectorAll(".reel--video iframe");
+  if (!frames.length) return;
+  const s = document.createElement("script");
+  s.src = "https://player.vimeo.com/api/player.js";
+  s.onload = () => frames.forEach(f => {
+    const p = new Vimeo.Player(f); let last = 0, dur = 0;
+    p.getDuration().then(d => dur = d).catch(() => {});
+    p.on("timeupdate", e => {
+      if (dur && last > dur - 1.5 && e.seconds < 1) { p.pause(); p.setCurrentTime(0); }
+      last = e.seconds;
+    });
+  });
+  document.head.appendChild(s);
+})();
+
+/* every [data-order] link → Deliveroo */
+document.querySelectorAll("[data-order]").forEach(a => {
+  a.href = ORDER_URL; a.target = "_blank"; a.rel = "noopener noreferrer";
+  if (!a.querySelector(".sr-only")) a.insertAdjacentHTML("beforeend", '<span class="sr-only"> on Deliveroo (opens in a new tab)</span>');
+});
+
+/* fit hero headline lines to the full width */
+function fitHero(){
+  // One calm line on desktop, three equal lines on phones; uniform size, ~90% of the width
+  const wrap = document.querySelector(".hero__titlewrap");
+  const solid = document.querySelector("h1.hero__title .hero__lines"), outline = document.querySelector(".hero__title--outline .hero__lines");
+  if (!wrap || !solid) return;
+  const W = wrap.clientWidth, narrow = W < 700, FILL = narrow ? 0.86 : 0.9;
+  const lines = narrow ? ["Bold", "Ukrainian", "Flavour"] : ["Bold Ukrainian Flavour"];
+  solid.innerHTML = lines.map(t => `<span class="hero__line" style="font-size:100px;letter-spacing:-0.03em"><span>${t}</span></span>`).join("");
+  const widest = Math.max(...[...solid.querySelectorAll(".hero__line > span")].map(e => e.getBoundingClientRect().width));
+  const fs = 100 * W * FILL / widest;
+  solid.querySelectorAll(".hero__line").forEach(l => l.style.fontSize = fs + "px");
+  if (outline) outline.innerHTML = solid.innerHTML;
+}
+fitHero();
+window.addEventListener("resize", fitHero);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
+
+/* mobile nav */
+const toggle = document.querySelector(".nav-toggle"), nav = document.getElementById("site-nav");
+const setNav = open => { toggle.setAttribute("aria-expanded", open); nav.classList.toggle("is-open", open); };
+toggle.addEventListener("click", () => setNav(toggle.getAttribute("aria-expanded") !== "true"));
+nav.addEventListener("click", e => { if (e.target.closest("a")) setNav(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("is-open")) { setNav(false); toggle.focus(); } });
+
+/* hide sticky mobile order bar while hero or footer CTA is on screen */
+const bar = document.getElementById("order-bar");
+if ("IntersectionObserver" in window) {
+  const watched = [document.querySelector(".hero__ctas"), document.querySelector(".site-footer")];
+  const visible = new Set();
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => en.isIntersecting ? visible.add(en.target) : visible.delete(en.target));
+    bar.classList.toggle("is-hidden", visible.size > 0);
+  });
+  watched.forEach(el => el && io.observe(el));
+}
+</script>
+</body>
+</html>

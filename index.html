@@ -34,7 +34,12 @@
 <!-- Meta Pixel: вставити тут -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<!-- hero image preloaded so it starts downloading before CSS/JS -->
+<link rel="preload" as="image" href="hero-1200.webp" imagesrcset="hero-800.webp 800w, hero-1200.webp 1200w, hero-1800.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<!-- fonts load without blocking the first paint (display=swap shows a fallback until they arrive) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&display=swap"></noscript>
 <style>
 /* ==========================================================
    DESIGN TOKENS
@@ -401,8 +406,8 @@ function heroPhotoError(img){
 
 <!-- ======= 02 HERO ======= -->
 <section class="hero" id="top" aria-labelledby="hero-title">
-  <img class="hero__bg" src="hero-2400.jpg" srcset="hero-1200.jpg 1200w, hero-2400.jpg 2400w" sizes="100vw" alt="" width="2400" height="1354" fetchpriority="high" decoding="async">
-  <img class="hero__cut" srcset="hero-cut-1200.webp 1200w, hero-cut-2400.webp 2400w" sizes="100vw" src="hero-cut-1200.webp" alt="" width="2400" height="1354" decoding="async">
+  <img class="hero__bg" src="hero-1200.webp" srcset="hero-800.webp 800w, hero-1200.webp 1200w, hero-1800.webp 1800w" sizes="100vw" alt="" width="2400" height="1354" fetchpriority="high" decoding="async">
+  <img class="hero__cut" src="hero-cut-1200.webp" srcset="hero-cut-800.webp 800w, hero-cut-1200.webp 1200w, hero-cut-1800.webp 1800w" sizes="100vw" alt="" width="2400" height="1354" decoding="async">
   <div class="hero__inner">
     <p class="hero__kicker eyebrow"><span>Dublin 1</span><span class="dot" aria-hidden="true">●</span><span>Dine-in &amp; takeaway</span></p>
     <div class="hero__titlewrap">
@@ -446,7 +451,6 @@ function heroPhotoError(img){
       <h2 class="h2" id="ukraine-title">A Taste<br>of Ukraine</h2>
       <div class="side">
         <p class="lead">Borscht, dumplings, banosh and more — comforting dishes inspired by Ukrainian cuisine.</p>
-        <a class="btn btn--green" data-order href="#">Order Now</a>
       </div>
     </div>
     <div class="tiles" data-render="ukraine"></div>
@@ -770,7 +774,7 @@ render("reels", Reel);
   const frames = document.querySelectorAll(".reel--video iframe");
   if (!frames.length) return;
   const s = document.createElement("script");
-  s.src = "https://player.vimeo.com/api/player.js";
+  const load = () => { if (s.src) return; s.src = "https://player.vimeo.com/api/player.js"; document.head.appendChild(s); };
   s.onload = () => frames.forEach(f => {
     const p = new Vimeo.Player(f); let last = 0, dur = 0;
     p.getDuration().then(d => dur = d).catch(() => {});
@@ -779,7 +783,10 @@ render("reels", Reel);
       last = e.seconds;
     });
   });
-  document.head.appendChild(s);
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: "600px" });
+    io.observe(frames[0]);
+  } else load();
 })();
 
 /* every [data-order] link → Deliveroo */
